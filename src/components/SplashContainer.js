@@ -2,13 +2,14 @@ import maiSplashImage from "../assets/mai.jpg";
 import zeroTwoSplashImage from "../assets/zerotwo.jpg";
 import narutoSplashImage from "../assets/naruto.jpg";
 import ichigoSplashImage from "../assets/ichigo.jpg";
+import { Link } from "react-router-dom";
 
 const SplashContainer = () => {
     return (
         <div className="container splash-container d-flex justify-content-center" id="home">
             <div className="row d-flex">
                 <div className="col-6 col-md-6 p-0 overlay-container">
-                    <a href="/products/all"><div className="splash-overlay"></div></a>
+                    <Link to="/products/all"><div className="splash-overlay"></div></Link>
                     <img className="bunny-splash" src={maiSplashImage} alt=""/>
                     <div className="splash-text">Your Favorite Anime Characters</div>
                 </div>
