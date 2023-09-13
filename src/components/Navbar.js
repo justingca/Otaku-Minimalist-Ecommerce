@@ -3,6 +3,7 @@ import { faCartShopping, faBars, faXmark } from "@fortawesome/free-solid-svg-ico
 import { useRef } from "react"
 import { useCartContext } from "../hooks/useCartContext";
 import ProductDetails from "./ProductDetails";
+import { Link } from "react-router-dom";
 const NavigationMenu = () => {
     const refNavMenu = useRef();
     const refBurger = useRef();
@@ -52,10 +53,10 @@ const NavigationMenu = () => {
             </div>
             <ul className="navi-menu" ref={refNavMenu} data-visible="false"> 
                 <li className="navi-item">
-                    <a href="/" className="navi-link">Home</a>
+                    <Link to="/" className="navi-link">Home</Link>
                 </li>
                 <li className="navi-item">
-                    <a href="/products/all/" className="navi-link">Products</a>
+                    <Link to="/products/all/" className="navi-link">Products</Link>
                 </li>      
             </ul>
             <div className="navBar-cart">
